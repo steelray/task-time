@@ -1,0 +1,90 @@
+// block justify 
+@mixin justify {
+  text-align: justify;
+
+  &:after {
+    display: inline-block;
+    width: 100%;
+    content: "";
+  }
+
+  >li {
+    @include inline-block;
+  }
+}
+
+
+
+// text decoration
+@mixin dec-y {
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+@mixin dec-n {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+@mixin dec-res {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+@mixin dec-under {
+  text-decoration: underline;
+}
+
+// clearfix
+@mixin clearfix {
+  zoom: 1;
+
+  &:before,
+  &:after {
+    display: table;
+    width: 100%;
+    content: "";
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+// reset ul|ol list
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+
+// opecity
+/* @mixin opacity($f, $s) {
+	opacity:$f;
+	filter:alpha(opacity=$s);
+} */
+
+// flex content vertical align
+@mixin content-align($align) {
+  align-items: $align;
+  @include display-flex;
+  @include flex-direction(column);
+  justify-content: center;
+}
+
+// fa icons
+@mixin icon($icon) {
+  @include fa-icon;
+  @extend .fa;
+  @extend .fa-#{$icon}:before;
+}

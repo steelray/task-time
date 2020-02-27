@@ -1,0 +1,22 @@
+.my-surface {
+  @include mdc-ripple-surface;
+  @include mdc-ripple-radius-bounded;
+  @include mdc-states;
+  overflow: hidden;
+}
+
+.default-form-field {
+  width: 100%;
+
+}
+
+.mdc-button {
+  &--danger:not(:disabled) {
+    background-color: red;
+    color: #ffffff;
+  }
+}
+
+.default-form-field {
+  margin-bottom: 30px;
+}

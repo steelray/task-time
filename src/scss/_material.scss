@@ -1,0 +1,10 @@
+$mdc-theme-primary: #4066cf;
+$mdc-theme-secondary: #fa9e25;
+$mdc-theme-on-primary: #ffffff;
+$mdc-theme-on-secondary: #fff9fa;
+
+@import '@material/button/mdc-button';
+@import "@material/textfield/mdc-text-field";
+@import "@material/checkbox/mdc-checkbox";
+@import "@material/snackbar/mdc-snackbar";
+@import "@material/dialog/mdc-dialog";

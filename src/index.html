@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <form class="task-form" id="task-form">
+        <div class="task-form__row">
+          <div class="task-form__col task-form__description-field">
+            <div class="mdc-text-field mdc-text-field--input default-form-field my-surface">
+              <input required type="text" name="description" id="description" class="mdc-text-field__input" />
+              <div class="mdc-notched-outline">
+                <div class="mdc-notched-outline__leading"></div>
+                <div class="mdc-notched-outline__notch">
+                  <label for="description" class="mdc-floating-label">Task description</label>
+                </div>
+                <div class="mdc-notched-outline__trailing"></div>
+              </div>
+            </div>
+          </div>
+          <div class="task-form__col task-form__rate-field">
+            <div class="mdc-text-field mdc-text-field--input default-form-field my-surface ">
+              <input type="number" name="rate" value="10" id="rate" class="mdc-text-field__input" />
+              <div class="mdc-notched-outline">
+                <div class="mdc-notched-outline__leading"></div>
+                <div class="mdc-notched-outline__notch">
+                  <label for="rate" class="mdc-floating-label">Rate($)</label>
+                </div>
+                <div class="mdc-notched-outline__trailing"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-center">
+          <button class="mdc-button mdc-button--raised my-surface">
+            Start
+          </button>
+        </div>
+      </form>
+    </div>
+  </header>
+  <main class="content">
+    <div class="container">
+      <h2 class="title-1">Actual tasks</h2>
+      <div id="actual-tasks" class="tasks">
+        <!-- <div class="tasks__item">
+            <div class="tasks__item__btns">
+              <button class="mdc-button mdc-button--raised my-surface start-btn">
+                <i class="material-icons">mood</i> start
+              </button>
+              <button class="mdc-button mdc-button--raised my-surface pause-btn">
+                pause <i class="material-icons">mood_bad</i>
+              </button>
+            </div>
+            <div class="tasks__item__description">
+              Some task description here
+            </div>
+            <button class="tasks__item__close">
+              <i class="material-icons">close</i>
+            </button>
+            <button class="tasks__item__expand-details " title="details">
+              <i class="material-icons">expand_more</i>
+            </button>
+            <div class="tasks__item__details">
+              <h3>Table of spent time</h3>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Start time</th>
+                    <th>End time</th>
+                    <th>Earned sum</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>2019-06-01 05:00</td>
+                    <td><span contenteditable="true">2019-06-01 06:00</span></td>
+                    <td>10$</td>
+                  </tr>
+                  <tr>
+                    <td>2019-06-01 05:00</td>
+                    <td><span contenteditable="true">2019-06-01 06:00</span></td>
+                    <td>10$</td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <td>Rate per hour: <strong>10$</strong></td>
+                    <td>Total spent time: <strong>10 hours</strong></td>
+                    <td>Total earned sum: <strong>100$</strong></td>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
+          </div> -->
+      </div>
+    </div>
+  </main>
+  <div class="confirm-dialog mdc-dialog" role="alertdialog" aria-modal="true" aria-labelledby="confirm-dialog-title"
+    aria-describedby="confirm-dialog-content">
+    <div class="mdc-dialog__container">
+      <div class="mdc-dialog__surface">
+        <div class="mdc-dialog__content" id="confirm-dialog-content">
+
+        </div>
+        <footer class="mdc-dialog__actions">
+          <button type="button" class="mdc-button mdc-dialog__button" data-mdc-dialog-action="no">
+            <span class="mdc-button__label">No</span>
+          </button>
+          <button type="button" class="mdc-button mdc-dialog__button" data-mdc-dialog-action="yes">
+            <span class="mdc-button__label">Yes</span>
+          </button>
+        </footer>
+      </div>
+    </div>
+    <div class="mdc-dialog__scrim"></div>
+  </div>
+  <div class="mdc-snackbar">
+    <div class="mdc-snackbar__surface">
+      <div class="mdc-snackbar__label" role="status" aria-live="polite">
+        Can't send photo. Retry in 5 seconds.
+      </div>
+      <div class="mdc-snackbar__actions">
+        <button type="button" class="mdc-button mdc-snackbar__action">Retry</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
