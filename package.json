@@ -34,7 +34,7 @@
     "compass-mixins": "^0.12.10",
     "fs": "0.0.1-security",
     "material-components-web": "^4.0.0",
-    "moment": "^2.24.0",
+    "moment": "^2.29.4",
     "normalize.css": "^8.0.1",
     "normalize.scss": "^0.1.0"
   }
